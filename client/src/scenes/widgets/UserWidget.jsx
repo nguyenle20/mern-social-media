@@ -23,7 +23,7 @@ const UserWidget = ({ userId, picturePath }) => {
 
   const getUser = async () => {
     const response = await fetch(
-      `https://mern-social-media-server-mm6d.onrender.com/users/${userId}`,
+      `https://mern-social-media-server-mm6d.onrender.com:10000/users/${userId}`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

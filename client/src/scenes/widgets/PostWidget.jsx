@@ -36,7 +36,7 @@ const PostWidget = ({
 
   const patchLike = async () => {
     const response = await fetch(
-      `https://mern-social-media-server-mm6d.onrender.com/post/${postId}/like`,
+      `https://mern-social-media-server-mm6d.onrender.com:10000/post/${postId}/like`,
       {
         method: "PATCH",
         headers: {
@@ -67,7 +67,7 @@ const PostWidget = ({
           height="auto"
           alt="post"
           style={{ borderRadius: "0.75rem", marginTop: "0.75rem" }}
-          src={`https://mern-social-media-server-mm6d.onrender.com/assets/${picturePath}`}
+          src={`https://mern-social-media-server-mm6d.onrender.com:10000/assets/${picturePath}`}
         />
       )}
       <FlexBetween mt="0.25rem">
