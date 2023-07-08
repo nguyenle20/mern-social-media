@@ -36,7 +36,7 @@ const PostWidget = ({
 
   const patchLike = async () => {
     const response = await fetch(
-      `https://mern-social-media-server-mm6d.onrender.com/post/${postId}/like`,
+      `https://mern-social-media-server-mm6d.onrender.com/posts/${postId}/like`,
       {
         method: "PATCH",
         headers: {
