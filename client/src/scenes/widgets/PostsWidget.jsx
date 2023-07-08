@@ -10,7 +10,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   const getPosts = async () => {
     const response = await fetch(
-      "https://mern-social-media-server-mm6d.onrender.com:10000posts",
+      "https://mern-social-media-server-mm6d.onrender.com/posts",
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },
@@ -22,7 +22,7 @@ const PostsWidget = ({ userId, isProfile = false }) => {
 
   const getUserPosts = async () => {
     const response = await fetch(
-      `https://mern-social-media-server-mm6d.onrender.com:10000/posts/${userId}/posts`,
+      `https://mern-social-media-server-mm6d.onrender.com/posts/${userId}/posts`,
       {
         method: "GET",
         headers: { Authorization: `Bearer ${token}` },

@@ -47,7 +47,7 @@ const MyPostWidget = ({ picturePath }) => {
     }
 
     const response = await fetch(
-      `https://mern-social-media-server-mm6d.onrender.com:10000/posts`,
+      `https://mern-social-media-server-mm6d.onrender.com/posts`,
       {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
