@@ -30,10 +30,6 @@ const ProfilePage = () => {
     getUser();
   }, []); //eslint-disable-line react-hooks/exhaustive-deps
 
-  useEffect(() => {
-    console.debug('userId ', userId)
-  }, [userId]);
-
   if (!user) return null;
 
   return (
