@@ -41,8 +41,8 @@ const Friend = ({ friendId, name, subtitle, userPicturePath }) => {
         <UserImage image={userPicturePath} size="55px" />
         <Box
           onClick={() => {
-            console.debug('friendId ', friendId);
             navigate(`/profile/${friendId}`);
+            navigate(0);
           }}
         >
           <Typography
