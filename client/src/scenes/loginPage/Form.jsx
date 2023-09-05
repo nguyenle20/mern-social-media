@@ -6,6 +6,7 @@ import {
   useMediaQuery,
   Typography,
   useTheme,
+  Alert,
 } from "@mui/material";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
 import { Formik } from "formik";
@@ -130,6 +131,12 @@ const Form = () => {
               "& > div": { gridColumn: isNonMobile ? undefined : "span 4" },
             }}
           >
+            <Box sx={{ gridColumn: "span 4" }}>
+              <Alert variant="filled" severity="info">
+                Sometimes you will receive a delayed response, maybe around 1 min,
+                because it is hosted on a free server. Please be patient.
+              </Alert>
+            </Box>
             {isRegister && (
               <>
                 <TextField
