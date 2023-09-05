@@ -14,7 +14,7 @@ const ProfilePage = () => {
   const token = useSelector((state) => state.token);
   const isNonMobileScreens = useMediaQuery("(min-width:1000px)");
 
-  const getUser = async () => {
+  const getUser = async (userId) => {
     const response = await fetch(
       `https://mern-social-media-server-mm6d.onrender.com/users/${userId}`,
       {
@@ -27,7 +27,9 @@ const ProfilePage = () => {
   };
 
   useEffect(() => {
-    getUser();
+    if(userId) {
+      getUser(userId);
+    }
   }, []); //eslint-disable-line react-hooks/exhaustive-deps
 
   if (!user) return null;
